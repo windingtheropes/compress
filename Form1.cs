@@ -23,6 +23,9 @@ namespace Compress
         private void goButton_Click(object sender, EventArgs e)
         {
             string input = inputBox.Text;
+            FileInfo ifi = new FileInfo(input);
+            var inMB = Decimal.Divide(ifi.Length, 1000000);
+
             string output = outputBox.Text;
             if (input == output)
             {
@@ -56,11 +59,11 @@ namespace Compress
                 p.WaitForExit();
             }
 
-            FileInfo ifi = new FileInfo(input);
+           
             FileInfo ofi = new FileInfo(output);
+            var outMB = Decimal.Divide(ofi.Length, 1000000);
 
-            resultLabel.Text = $"{ifi.Length.ToString()} to {ofi.Length.ToString()}";
-
+            MessageBox.Show($"Compression complete. Went from {inMB.ToString()}MB to {outMB.ToString()}MB.", "Compression Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void inputBrowse_Click(object sender, EventArgs e)
@@ -78,7 +81,7 @@ namespace Compress
                 {
                     //Get the path of specified file
                     inputBox.Text = openFileDialog.FileName;
-                    outputBox.Text = openFileDialog.FileName + ".mp4";
+                    outputBox.Text = openFileDialog.FileName + "_COMPRESSED.mp4";
 
                 }
             }

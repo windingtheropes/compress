@@ -40,7 +40,6 @@
             this.bitrateBox = new System.Windows.Forms.TextBox();
             this.bitrateLabel = new System.Windows.Forms.Label();
             this.inputBrowse = new System.Windows.Forms.Button();
-            this.resultLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.crfBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -165,21 +164,11 @@
             this.inputBrowse.UseVisualStyleBackColor = true;
             this.inputBrowse.Click += new System.EventHandler(this.inputBrowse_Click);
             // 
-            // resultLabel
-            // 
-            this.resultLabel.AutoSize = true;
-            this.resultLabel.Location = new System.Drawing.Point(71, 247);
-            this.resultLabel.Name = "resultLabel";
-            this.resultLabel.Size = new System.Drawing.Size(32, 13);
-            this.resultLabel.TabIndex = 13;
-            this.resultLabel.Text = "result";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 460);
-            this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.inputBrowse);
             this.Controls.Add(this.bitrateLabel);
             this.Controls.Add(this.bitrateBox);
@@ -214,7 +203,6 @@
         private System.Windows.Forms.TextBox bitrateBox;
         private System.Windows.Forms.Label bitrateLabel;
         private System.Windows.Forms.Button inputBrowse;
-        private System.Windows.Forms.Label resultLabel;
     }
 }
 
